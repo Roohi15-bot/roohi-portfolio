@@ -65,11 +65,13 @@ header nav ul li a:hover, #theme-toggle:hover {color:#000;}
 .btn:hover {background:#00c1d4;}
 
 .hero-right .photo {
-  width:220px; height:220px;
-  border-radius:50%;
-  background:url('78e00e3c-93ab-41b8-876c-4e783c66d4cc.jpg') center/cover no-repeat;
-  border:4px solid var(--accent);
-  margin:auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 18px auto;
+  border: 4px solid var(--accent);
+  display: block;
 }
 
 .section {margin-bottom:40px; opacity:0; transform:translateY(20px); transition:0.6s ease-out;}
