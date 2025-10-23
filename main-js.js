@@ -1,9 +1,15 @@
-// Smooth scrolling
+// Smooth scrolling with header offset
+const headerHeight = document.querySelector('header').offsetHeight;
+
 document.querySelectorAll('header nav ul li a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
+    const target = document.querySelector(link.getAttribute('href'));
+    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10; 
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
   });
 });
 
